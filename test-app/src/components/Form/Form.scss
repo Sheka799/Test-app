@@ -1,0 +1,25 @@
+.form {
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+  }
+  &-input {
+    padding: 8px 15px;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  &-result {
+    margin-top: 20px;
+    ul {
+      padding-left: 0;
+    }
+    ul li {
+      list-style: none;
+      font-size: 18px;
+      margin-top: 12px;
+    }
+  }
+}

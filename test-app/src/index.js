@@ -2,15 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import {createStore} from 'redux'
 import reducer from './redux/reducer'
+import Form from '../src/components/Form/Form'
+import Character from '../src/components/Сharacter/Сharacter'
 
 const store = createStore(reducer)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <App>
+    <Switch>
+          <Route path="/" exact component={Form}/>
+          <Route path="/:name" component={Character}/>
+      </Switch>
+      </App>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
